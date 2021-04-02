@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>create post</title>
+</head> 
+<body>
+    <h3 color="Green"><%= title %> </h3>
+    <form action="" method="POST">
+      <label for="title">Title</label>
+      <input name="title" placeholder="" type="text" /><br/>
+      <label for="text">Text: </label>
+      <input name="text" placeholder="text" type="text" /><br/>
+      
+      <%= currentUser.fullname %>
+
+      <button>create</button>
+    </form>    
+</body>
+</html>

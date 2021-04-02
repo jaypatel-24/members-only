@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul id="navbar">
+      <%if (login == false)  { %>
+      <li><a href="/log-in">Login</a></li>
+      <% } %>
+      <%if (signup == false)  { %>
+        <li><a href="/sign-up">Signup</a></li>
+      <% } %>      
+  </ul>
+    
+    <div class="container">
+    <ul>
+      <h6>Join the club after loggin in to see author of post</h6><br/>
+      
+      <% post_list.forEach(function(post){ %>
+        <li class ="postList"><%= post.title %> <br/>
+            <%= post.text %>
+        </li><hr/><br/>
+      <% }) %>
+    </ul> 
+    </div>
+  </body>
+</html>

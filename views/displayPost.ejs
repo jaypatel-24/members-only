@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=  %></title>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="/logout">logout</a></li>
+  </ul>
+  <h3><%  %></h3>
+    <div class="container">
+    <ul>
+            <%= post.title %> <br/>
+            <%= post.text %> <br/>
+            Author: <%=  post.author.fullname %> <br/>
+            
+            <form action="" method="POST">
+              <button>Delete Post</button>
+            </form>    
+        <hr/>
+    </ul> 
+    </div>
+  </body>
+</html>

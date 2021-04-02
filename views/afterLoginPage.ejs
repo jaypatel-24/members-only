@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="/logout">logout</a></li>
+  </ul>
+  <h3>Welcome</h3>
+  <form action="/create-post" method="GET">
+    <button>create post</button>
+  </form>
+    <div class="container">
+    <ul>
+      <% post_list.forEach(function(post){ %>
+        <li class ="postList">
+            <%= post.title %> <br/>
+            <%= post.text %> <br/>  
+            <% if (membershipStatus == "insider") { %>
+              Author: <b><%= post.author.fullname %></b>
+            <%} else  if(membershipStatus == "outsider") { %>
+                <a href="/join-club">join club to see author</a>
+                <form action="/join-club" method="GET">
+                  <input type="hidden" name="id" value="<%= id %>" ></input>
+                  <button>Join club</button>
+                </form>
+            <% } %>
+            
+        </li><hr/><br/>
+      <% }) %>
+    </ul> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <ul id="navbar">
+      <li><a href="/logout">logout</a></li>
+  </ul>
+  <h3><% title %></h3>
+  <form action="/create-post" method="GET">
+    <button>create post</button>
+  </form>
+    <div class="container">
+    <ul>
+      <% post_list.forEach(function(post){ %>
+        <li class ="postList">
+            <%= post.title %> <br/>
+            <%= post.text %> <br/>
+            Author: <%= post.author.fullname %> <br/>
+            url: <%= post.url %> <br/> 
+
+            <p><a href= "<%= post.url %>" >delete</a></p>
+        </li><hr/><br/>
+      <% }) %>
+    </ul> 
+    </div>
+  </body>
+</html>

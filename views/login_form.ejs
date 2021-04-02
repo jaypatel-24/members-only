@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head> 
+<body>
+    <h3 color="green">please log in</h3>
+    <form action="" method="POST">
+      <label for="email">Email</label>
+      <input name="email" placeholder="@gmail.com" type="text" />
+      <label for="password">Password</label>
+      <input name="password" type="password" />
+
+      <button>Log In</button>
+    </form>
+    <% if (errors.length > 0) { %>
+      <% errors.forEach(function(error){ %>
+        <li><%= error %> </li>
+      <% }) %>
+    <% } %>
+
+    
+</body>
+</html>
